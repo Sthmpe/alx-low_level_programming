@@ -1,7 +1,6 @@
 #include <stdio.h>
 /**
  * main - prints out first 50
- *  
  * Return: return 0
  */
 int main(void)
