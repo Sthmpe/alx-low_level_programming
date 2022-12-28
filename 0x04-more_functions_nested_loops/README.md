@@ -1,4 +1,4 @@
-#Resources
+ ### Resources
  Read or watch:
 
 Type &ensp*[Nested while loops](https://alx-intranet.hbtn.io/rltoken/aDRkFzUkVysnD94Dpm3w5g)
