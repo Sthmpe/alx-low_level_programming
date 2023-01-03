@@ -1,8 +1,10 @@
-# **0x07. C - Even more pointers, arrays and strings 
+# **0x07. C - Even more pointers, arrays and strings** 
 **`C`**
 
-By: Julien Barbier
-
+ `Mentor: Julien Barbier`
+ 
+ By: David
+ 
 ### Concepts
 
   * [Pointers and arrays](https://alx-intranet.hbtn.io/concepts/60)
@@ -11,17 +13,24 @@ By: Julien Barbier
 
 #### **Read or Watch**
     
-   * [C - pointer to pointer](httos://alx-intranet.hbtn.io/eyiikXPg7ZxCAEuWKIB6xtQ)
+   * [C - pointer to pointer](https://alx-intranet.hbtn.io/eyiikXPg7ZxCAEuWKIB6xtQ)
+   * [C - pointer-to-pointer example](https://alx-intranet.hbtn.io/rltoken/ojr7OUUm2I-MULE4lWlrkg)
+   * [Multi-dimensional Arrays](https://alx-intranet.hbtn.io/rltoken/HUZIJ6t55KM7d7FBCwWm8Q)
+   * [Two dimensional (2D) arrays in C](https://alx-intranet.hbtn.io/rltoken/Dx9nIBRj68sRBGe2NRI_aQ)
 
 ### General
 
    * **Pointer to pointer** - This is when a pointer hold the address of another pointer 
-     **How to declare pointer-to-pointer(Double pointer)**
-    `int **ptr2;`
-    **Example of double pointer**
-    `#include <stdio.h>
-     int main(void)
-     {
+     * **How to declare pointer-to-pointer(Double pointer)**
+     
+       `int **ptr2;`
+       
+     * **Example of double pointer**
+     
+       ```
+        #include <stdio.h>
+        int main(void)
+        {
              int var = 100;
              int *pr1;  /* A normal pointer */
              int **pr2; /* A pointer-to-pointer */
@@ -52,19 +61,21 @@ By: Julien Barbier
               printf("Address of pointer pr2: %p\n", &pr2);
         
               return (0);
-     }`
-     **output:**
-     `Value of var: 100
-      Value of var using the pointer pr1: 100
-      Value of var using the pointer pr2: 100
-      Address of var: 0x7fffffffda84
-      Address of var using pointer pr1: 0x7fffffffda84
-      Address of var using pointer pr2: 0x7fffffffda84
-      Value of pointer pr1: 0x7fffffffda84
-      Value of pointer pr1 using the pointer pr2: 0x7fffffffda84
-      Address of pointer pr1: 0x7fffffffda88
-      Address  using the pointer pr2: 0x7fffffffda88
-      Value of pointer pr2: 0x7fffffffda88
-      Address of pointer pr2: 0x7fffffffda90
-      `
+         }
+         ```
+     * **output:**
+         ```
+         Value of var: 100
+         Value of var using the pointer pr1: 100
+         Value of var using the pointer pr2: 100
+         Address of var: 0x7fffffffda84
+         Address of var using pointer pr1: 0x7fffffffda84
+         Address of var using pointer pr2: 0x7fffffffda84
+         Value of pointer pr1: 0x7fffffffda84
+         Value of pointer pr1 using the pointer pr2: 0x7fffffffda84
+         Address of pointer pr1: 0x7fffffffda88
+         Address  using the pointer pr2: 0x7fffffffda88
+         Value of pointer pr2: 0x7fffffffda88
+         Address of pointer pr2: 0x7fffffffda90
+        ```
 
