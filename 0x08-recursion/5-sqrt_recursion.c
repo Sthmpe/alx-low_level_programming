@@ -8,11 +8,22 @@
  */
 int _sqrt_recursion(int n)
 {
-	int i = 0
-	
-	i = j;
-	int j;
+	int j = 1;
 
-	if (n >= 0)
-	{n
-		return 
+	if (n > 0 || n == 0)
+		n = squrt(j, n);
+	else
+		n = -1;
+	return (n);
+}
+
+int squrt(int i, int n)
+{
+	int j = n / i;
+	
+	if (j * j == n)
+		return (j);
+	else
+		squrt(i + 1, n);
+	return (-1);
+}
