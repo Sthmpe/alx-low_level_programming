@@ -11,7 +11,7 @@ int _sqrt_recursion(int n)
 	int j = 1;
 
 	if (n > 0 || n == 0)
-		return (squrt(j, n, 1));
+		return (squrt(j, n, n / j));
 	else
 		return (-1);
 }
@@ -20,9 +20,9 @@ int squrt(int i, int n, int j)
 {	
 	if (n == j * j)
 		return (j);
-	else if (j * j != n)
+	else if (n > j * j)
 	{
-
+		return (-1);
 	}
 	else
 	{
