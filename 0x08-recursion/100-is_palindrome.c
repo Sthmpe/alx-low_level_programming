@@ -14,7 +14,7 @@ int is_palindrome(char *s)
 	if (!(*s))
 		return (1);
 
-	return(check_palindrome(s, len, index));
+	return (check_palindrome(s, len, index));
 }
 
 /**
@@ -43,14 +43,12 @@ int find_strlen(char *s)
  * @index: the index of the string to check
  * @len: the lenth of the string.
  *
- * Return: 1 if the string is palindrome.
- *         0 if the string is not palindrome. 
+ * Return: 1 if the string is palindrome, 0 if the string is not palindrome. 
  */
 int check_palindrome(char *s, int len, int index)
 {
 	if (s[index] == s[len / 2])
-		return (1);
-		
+		return (1);		
 	if (s[index] == s[len - index - 1])
 		return (check_palindrome(s, len, index + 1));
 
