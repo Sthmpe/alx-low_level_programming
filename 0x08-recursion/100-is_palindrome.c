@@ -20,7 +20,6 @@ int is_palindrome(char *s)
 /**
  * find_strlen - determine the lenght of a string
  * @s: the string to be measured.
- * @len: holds the lenght of the measured string
  *
  * Return: the length of string.
  */
