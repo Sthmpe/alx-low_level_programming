@@ -12,7 +12,7 @@ void _puts(char *str)
 		if (*str == '\0')
 		{
 			_putchar(str[len]);
-			break;<F11>
+			break;
 		}
 		_putchar(str[len]);
 		len++;
