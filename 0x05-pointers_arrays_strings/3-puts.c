@@ -4,7 +4,7 @@
  * _puts - print string
  * @str: Tge strign to be printed out.
  */
-void _puts(cahr *str)
+void _puts(char *str)
 {
 	long len = 0;
 
