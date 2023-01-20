@@ -8,7 +8,7 @@
  */
 int _strlen(char *s)
 {
-	int len, count;
+	int len;
 
 	len = 0;
 	do {
