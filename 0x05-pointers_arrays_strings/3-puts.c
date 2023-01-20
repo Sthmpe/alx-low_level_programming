@@ -11,8 +11,8 @@ void _puts(char *str)
 	do {
 		if (*str == '\0')
 		{
-			_putchar(*str);
-			break;
+			_putchar(str[len]);
+			break;<F11>
 		}
 		_putchar(str[len]);
 		len++;
