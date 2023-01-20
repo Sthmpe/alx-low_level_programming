@@ -11,7 +11,6 @@ void _puts(char *str)
 	do {
 		if (*str == '\0')
 		{
-			_putchar(str[len]);
 			break;
 		}
 		_putchar(str[len]);
