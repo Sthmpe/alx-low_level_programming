@@ -1,20 +1,29 @@
 #include "main.h"
 
 /**
- * _puts - print string
- * @str: Tge strign to be printed out.
+ * print_rev - print string in reverse.
+ * @s: The string to be printed out.
  */
-void _puts(char *str)
+void print_rev(char *s)
 {
 	long len = 0;
 
 	do {
-		if (*str == '\0')
+		if (*s == '\0')
 		{
-			break;
+			if (len > 0)
+			{
+				do {
+					len--;
+					_putchar(s[len]);
+					if (len == 0)
+						break;
+				} while (s[len]);
+			}
+			else
+				break;
 		}
-		_putchar(str[len]);
 		len++;
-	} while (str[len]);
+	} while (s[len]);
 	_putchar('\n');
 }
