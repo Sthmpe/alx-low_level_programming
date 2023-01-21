@@ -19,6 +19,7 @@ void print_rev(char *s)
 					if (len == 0)
 						break;
 				} while (s[len]);
+				break;
 			}
 			else
 				break;
