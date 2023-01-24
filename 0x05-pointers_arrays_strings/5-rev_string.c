@@ -24,7 +24,7 @@ void rev_string(char *s)
 }
 
 /**
- * swp_char - swap character
+ * swap_char - swap character
  * @s: The given string.
  * @rev_s: The reversed string.
  */
@@ -34,3 +34,4 @@ void swap_char(char *s, char *rev_s)
 	*rev_s = *s;
 	*s = swap;
 }
+
