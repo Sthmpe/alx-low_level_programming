@@ -13,12 +13,9 @@ char *_strcpy(char *dest, char *src)
 
 	do {
 		*(dest + len) = *(src + len);
-		if (src[len] == '\0')
-		{
-			*(dest + len) = *(src + len);
-			break;
-		}
-	} while (len++);
+		len++;
+	} while (src[len] == '\0');
+	*(dest + len) = '\0';
 
 	return (dest);
 }
