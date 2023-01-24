@@ -17,6 +17,7 @@ void puts_half(char *str)
 		if (str[len] != 0)
 		{
 			_putchar(str[len]);
+			len++;
 		}
 		else
 			break;
