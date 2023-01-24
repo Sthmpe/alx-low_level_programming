@@ -11,7 +11,7 @@ char *_strcpy(char *dest, char *src)
 {
 	int len = 0;
 
-	if (src == "")
+	if (*src == "")
 		*dest = *src;
 	else
 	{
