@@ -10,17 +10,17 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int lendest = 0;
+	int lendest = _strlen(dest);
 	int i = 0;
+	int lenfinal = _strlen(dest) + _strlen(src);
 
-	for (lendest = _strlen(dest); lendest <= (_strlen(dest) + _strlen(src)); lendest++)
+	for (; lendest <= lenfinal; lendest++)
 	{
-			*(dest + lendest) = *(src + i);
-			i++;
+		*(dest + lendest) = *(src + i);
+		i++;
 	}
 	return (dest);
 }
-
 /**
  * _strlen - measure tht length of string
  * @s: the string yo be measured.
