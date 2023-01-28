@@ -1,43 +1,41 @@
 #include "main.h"
 
 /**
- * _strcmp - compares two string.
- * @s1: The first string.
- * @s2: The second string.
- *
- * Return: An integer.
- */
+* _strcmp - Function which compare two strings
+* @s1: first string
+* @s2: second string
+* Return:
+* returns zero if s1 == s2
+* returns negative number if s1 < s2
+* returns positive number if s1 > s2
+*/
+
 int _strcmp(char *s1, char *s2)
 {
-	int s1_len = _strlen(s1);
-	int s2_len = _strlen(s2);
+	int i = 0, diff = 0;
 
-	if (s1_len < s2_len)
-		return (-15);
-	else if (s1_len > s2_len)
-		return (15);
-	else
-		return (0);
-
-}
-
-/**
- * _strlen - measure tht length of string
- * @s: the string yo be measured.
- *
- * Return: the lenght of string.
- */
-int _strlen(char *s)
-{
-	int len;
-
-	len = 0;
-	do {
-		if (*s == '\0')
+	while (1)
+	{
+		if (s1[i] == '\0' && s2[i] == '\0')
 			break;
+		else if (s1[i] == '\0')
+		{
+			diff = s2[i];
+			break;
+		}
+		else if (s2[i] == '\0')
+		{
+			diff = s1[i];
+			break;
+		}
+		else if (s1[i] != s2[i])
+		{
+			diff = s1[i] - s2[i];
+			break;
+		}
+		else
+			i++;
 
-		len++;
-	} while (s[len]);
-
-	return (len);
+	}
+	return (diff);
 }
