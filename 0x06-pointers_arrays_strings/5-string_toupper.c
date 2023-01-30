@@ -11,9 +11,9 @@ char *string_toupper(char *s)
 	int len = 0;
 
 	for (; s[len]; len++)
-        {
+	{
 		if (s[len] >= 'a' &&  s[len] <= 'z')
 			s[len] =  s[len] - 32;
-        }
+	}
 	return (s);
 }
