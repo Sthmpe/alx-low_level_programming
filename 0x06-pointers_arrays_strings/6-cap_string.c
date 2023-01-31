@@ -40,7 +40,7 @@ char *cap_string(char *s)
 		else if (s[len] == '?' && s[len + 1] >= 'a' && s[len + 1] <= 'z')
 			s[len + 1] =  s[len + 1] - 32;
 		else if (len == 0 && s[len] >= 'a' && s[len] <= 'z')
-			s[len + 1] =  s[len + 1] - 32;
+			s[len] =  s[len] - 32;
 	}
 	return (s);
 }
