@@ -12,8 +12,31 @@ char *cap_string(char *s)
 
 	for (; s[len]; len++)
 	{
-		if (s[len] == 32 || s[len] == 33)
-                        if
+		if (s[len] == ' ' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == '\t' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == '\n' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == ',' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == ';' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == '.' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == '!' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == '"' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == '(' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == ')' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == '{' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == '}' && s[len + 1] >= 'a' && s[len] <= 'z')
+			s[len + 1] =  s[len + 1] - 32;
+		else if (s[len] == '?' && s[len + 1] >= 'a' && s[len] <= 'z')
 			s[len + 1] =  s[len + 1] - 32;
 	}
 	return (s);
