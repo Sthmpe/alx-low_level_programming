@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * cap_string - change the charcter after word seperator in a string to uppercase. 
+ * cap_string - change the charcter after
+ * word seperator in a string to uppercase.
  * @s: the string to change.
  *
  * Return: The updated string.
