@@ -12,7 +12,7 @@ char *leet(char *s)
 	int index;
 	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
-	while (s[++len])
+	while (s[len])
 	{
 		for (index = 0; index <= 7; index++)
 		{
@@ -20,6 +20,7 @@ char *leet(char *s)
 			s[len] - 32 == leet[index])
 				s[len] = index + '0';
 		}
+		len++;
 	}
 	return (s);
 }
