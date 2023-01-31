@@ -9,7 +9,7 @@ char *rot13(char *s)
 {
 	int len = 0, index;
 	char rot[52] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char rev[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwzyxabcdefghijklm";
+	char rev[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (; s[len]; len++)
 	{
