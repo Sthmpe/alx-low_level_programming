@@ -1,9 +1,5 @@
 #include <stdio.h>
-/**
- * main - modify an are without callin it or changing your declearation.
- *
- * Return: always 0.
- */
+
 int main(void)
 {
 	int n;
