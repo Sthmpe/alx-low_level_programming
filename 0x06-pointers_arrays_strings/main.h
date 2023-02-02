@@ -13,8 +13,10 @@ char *cap_string(char *);
 char *leet(char *);
 char *rot13(char *);
 void print_number(int n);
-char *infinite_add(char *n1, char *n2, char *r, int size_r);
+long int infinite_add(char *n1, char *n2);
 void print_buffer(char *b, int size);
 int _strlen(char *s);
-void swap_char(char *s, char *r);
+long int string_to_integer(char *n);
+long int add_string(char *n1, char *n2);
+char *buffer_sum(char *n1, char *n2, char *r);
 #endif

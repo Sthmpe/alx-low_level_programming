@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
 * infinite_add - C function that adds two numbers stored
 *in strings to a buffer.
@@ -16,45 +16,167 @@
 *Return:returns pointer to result
 */
 
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
+long int infinite_add(char *n1, char *n2)
 {
+	return (add_string(n1,n2));
 }
 
 /**
-* add_strings - Adds the numbers stored in two strings.
-* @n1: The string containing the first number to be added.
-* @n2: The string containing the second number to be added.
-* @r: The buffer to store the result.
-* @r_index: The current index of the buffer.
-*
-* Return: If r can store the sum - a pointer to the result.
-*         If r cannot store the sum - 0.
-*/
+ * add_string - Add string containing only real numbers.
+ * @n1: The first string to be added.
+ * @n2: The second string to be added.
+ *
+ * Return: The sum in real numbers.
+ */
+long int add_string(char *n1, char *n2)
+ {
+	long int real = string_to_integer(n1) + string_to_integer(n2);
 
-char *add_strings(char *n1, char *n2, char *r, int r_index)
+	return (real);
+ }
+/**
+ * string_to_integer - Convert a string containing only real numbers to real numbers
+ * @n: The string containing the number.
+ *
+ * Return: The real number.
+ */
+long int string_to_integer(char *n)
 {
-	int num, tens = 0;
+	long int len = _strlen(n) - 1;
+	long int real = 0, i, j, k;
 
-	for (; *n1 && *n2; n1--, n2--, r_index--)
+	for (i = 0; n[i]; i++)
 	{
-		num = (*n1 - '0') + (*n2 - '0');
-		num += tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
+		if (n[i] == 48)
+		{
+			if (len - i == 0)
+				k = 1;
+			for (j = 1; j <= len - i; j++)
+			{
+				k = k * 10;
+			}
+			real = real + (0 * k);
+			k = 1;
+		}
+		else if (n[i] == 49)
+		{
+			if (len - i == 0)
+				k = 1;
+			for (j = 1; j <= len - i; j++)
+			{
+				k = k * 10;
+			}
+			real = real + (1 * k);
+			k = 1;
+		}
+		else if (n[i] == 50)
+		{
+			if (len - i == 0)
+				k = 1;
+			for (j = 1; j <= len - i; j++)
+			{
+				k = k * 10;
+			}
+			real = real + (2 * k);
+			k = 1;
+		}
+		else if (n[i] == 51)
+		{
+			if (len - i == 0)
+				k = 1;
+			for (j = 1; j <= len - i; j++)
+			{
+				k = k * 10;
+			}
+			real = real + (3 * k);
+			k = 1;
+		}
+		else if (n[i] == 52)
+		{
+			if (len - i == 0)
+				k = 1;
+			for (j = 1; j <= len - i; j++)
+			{
+				k = k * 10;
+			}
+			real = real + (4 * k);
+			k = 1;
+		}
+		else if (n[i] == 53)
+		{
+			if (len - i == 0)
+				k = 1;
+			for (j = 1; j <= len - i; j++)
+			{
+				k = k * 10;
+			}
+			real = real + (5 * k);
+			k = 1;
+		}
+		else if (n[i] == 54)
+		{
+			if (len - i == 0)
+				k = 1;
+			for (j = 1; j <= len - i; j++)
+			{
+				k = k * 10;
+			}
+			real = real + (6 * k);
+			k = 1;
+		}
+		else if (n[i] == 55)
+		{
+			if (len - i == 0)
+				k = 1;
+			for (j = 1; j <= len - i; j++)
+			{
+				k = k * 10;
+			}
+			real = real + (7 * k);
+			k = 1;
+		}
+		else if (n[i] == 56)
+		{
+			if (len - i == 0)
+				k = 1;
+			for (j = 1; j <= len - i; j++)
+			{
+				k = k * 10;
+			}
+			real = real + (8 * k);
+			k = 1;
+		}
+		else if (n[i] == 57)
+		{
+			if (len - i == 0)
+				k = 1;
+			for (j = 1; j <= len - i; j++)
+			{
+				k = k * 10;
+			}
+			real = real + (9 * k);
+			k = 1;
+		}
 	}
+	return (real);
+}
+/**
+ * _strlen - measure the length of string
+ * @s: the string to be measured.
+ *
+ * Return: the lenght of string.
+ */
+int _strlen(char *s)
+{
+	int len;
 
-	for (; *n1; n1--; r_index++)
-	{
-		num = *(n1 - '0') + tens; 
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
-	}
+	len = 0;
+	do {
+		if (*s == '\0')
+			break;
 
-	for (; *n2; n2--;  r_index--)
-	{
-		num = (*n2 - '0') + tens; 
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10; 
-	}
-	
+		len++;
+	} while (s[len]);
+
+	return (len);
 }
