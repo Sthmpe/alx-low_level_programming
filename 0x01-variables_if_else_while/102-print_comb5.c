@@ -1,34 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
 /**
- * main - Entry
- *
- * Return: always 0 (success)
- */
+*main - Prints all combinations of two two digits with,
+* and space followed by new line
+*
+*Return: returns 0
+*/
 int main(void)
 {
-	int p, q;
+	int digit1, digit2;
 
-	for (p = 0; p <= 98; p++)
+	for (digit1 = 0; digit1 <= 98; digit1++)
 	{
-		for (q = p + 1; q <= 99; q++)
+		for (digit2 = digit1 + 1; digit2 <= 99; digit2++)
 		{
-			putchar((p / 10) + '0');
-			putchar((p % 10) + '0');
-			putchar(' ');
-			putchar((q / 10) + '0');
-			putchar((q % 10) + '0');
+			putchar((digit1 / 10) + '0');
+			putchar((digit1 % 10) + '0');
+			putchar(32);
+			putchar((digit2 / 10) + '0');
+			putchar((digit2 % 10) + '0');
 
-			if (p == 98 && q == 99)
-				continue;
-
-			putchar(',');
-			putchar(' ');
+			if (digit1 / 10 != 9 || digit1 % 10 != 8)
+			{
+				putchar(44);
+				putchar(32);
+			}
 		}
 	}
-	putchar('\n');
-
+	putchar(10);
 	return (0);
 }

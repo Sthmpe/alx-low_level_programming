@@ -1,35 +1,23 @@
 #include "main.h"
-
 /**
- * jack_bauer - digital clock
- * @hr:
- * @s:
- * @r:
- * @m:
- */
-
+*jack_bauer - prints each minute of the day
+*
+*Return:returns 0
+*/
 void jack_bauer(void)
 {
-	int hr, s, r, m;
+int min, hour;
+for (hour = 0; hour <= 23; hour++)
+{
+for (min = 0; min <= 59; min++)
+{
+_putchar((hour / 10) + '0');
+_putchar((hour % 10) + '0');
+_putchar(':');
+_putchar((min / 10) + '0');
+_putchar((min % 10) + '0');
+_putchar(10);
+}
+}
 
-	for (hr = '0'; hr <= '2'; hr++)
-	{
-		for (m = '0'; m <= '9'; m++)
-		{
-			for (r = '0'; r <= '5'; r++)
-			{
-				for (s = '0'; s <= '9'; s++)
-				{
-					_putchar(hr);
-					_putchar(m);
-					_putchar(58);
-					_putchar(r);
-					_putchar(s);
-					_putchar('\n');
-				}
-			}
-			if (hr == '2' && m == '3')
-				break;
-		}
-	}
 }

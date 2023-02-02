@@ -1,49 +1,23 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * _strncat - concatenates n character of a string into another string.
- * @src: The source string or initial string.
- * @dest: The destination of the copir=ed string.
- * @n: The nuber of character to be concatenates.
- *
- * Return: dest.
+ *_strncat - concatenate two strings but add inputted number of bytes
+ *@dest: string to be appended upon
+ *@src: string to be completed at end of dest
+ *@n:integer parameter to compare index to
+ *Return: returns new concatenated string
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
-	int lendest = _strlen(dest);
-	int i = 0;
-	int lenfinal = _strlen(dest) + n;
 
-	for (; lendest <= lenfinal; lendest++)
-	{
-		if (i < n && src[i])
-		{
-			*(dest + lendest) = *(src + i);
-			i++;
-		}
-		else
-			break;
-	}
+	int index = 0, dest_len = 0;
+
+	while (dest[index++])
+		dest_len++;
+
+	for (index = 0; src[index] && index < n; index++)
+		dest[dest_len++] = src[index];
+
 	return (dest);
-}
-/**
- * _strlen - measure tht length of string
- * @s: the string yo be measured.
- *
- * Return: the lenght of string.
- */
-int _strlen(char *s)
-{
-	int len;
 
-	len = 0;
-	do {
-		if (*s == '\0')
-			break;
-
-		len++;
-	} while (s[len]);
-
-	return (len);
 }
