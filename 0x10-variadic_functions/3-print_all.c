@@ -4,10 +4,10 @@
  * print_all - Print anything.
  * @format: A list of types of argument passed to the function.
  *	    where c : char
-		  i : integer
-		  f : float
-		  s : char * (if string is NULL, print '(nil)')
-		  any other char are ignored.
+ *	  i : integer
+ *	  f : float
+ *	  s : char * (if string is NULL, print '(nil)')
+ *	  any other char are ignored.
  */
 void print_all(const char * const format, ...)
 {
@@ -43,33 +43,47 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 		if (i < index - 1)
-		{
-			switch (format[i])
-			{
-				case 'c':
-					printf(", ");
-					break;
-				case 'i':
-					printf(", ");
-					break;
-				case 'f':
-					printf(", ");
-					break;
-				case 's':
-					printf(", ");
-					break;
-				default:
-					break;
-			}
-		}
+			seperator(i, format);
 	}
 	va_end(list);
 	printf("\n");
 }
 
+/**
+ * len_of_format - count the length of the string format.
+ * @format: A constant string.
+ * Return: the length.
+ */
 int len_of_format(const char * const format)
 {
 	int index = 0;
-	while (format[index++]);
+
+	while (format[index++])
+	;
 	return (index);
+}
+/**
+ * seperator - Seperate a by , and space.
+ * @i: an integer.
+ * @format: a the string.
+ */
+void seperator(int i, const char * const format)
+{
+	switch (format[i])
+	{
+		case 'c':
+			printf(", ");
+			break;
+		case 'i':
+			printf(", ");
+			break;
+		case 'f':
+			printf(", ");
+			break;
+		case 's':
+			printf(", ");
+			break;
+		default:
+			break;
+	}
 }
