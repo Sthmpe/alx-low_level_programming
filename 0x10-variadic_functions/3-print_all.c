@@ -14,7 +14,6 @@ void print_all(const char * const format, ...)
 	va_list list;
 	int i = 0;
 	char *va_str;
-	int index = len_of_format(format);
 
 	va_start(list, format);
 	while (format[i])
@@ -42,25 +41,11 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		i++;
-		if (i < index - 1)
+		if (i != '\0')
 			seperator(i, format);
 	}
 	va_end(list);
 	printf("\n");
-}
-
-/**
- * len_of_format - count the length of the string format.
- * @format: A constant string.
- * Return: the length.
- */
-int len_of_format(const char * const format)
-{
-	int index = 0;
-
-	while (format[index++])
-	;
-	return (index);
 }
 /**
  * seperator - Seperate a by , and space.
