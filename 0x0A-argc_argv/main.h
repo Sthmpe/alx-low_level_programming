@@ -3,4 +3,5 @@
 #include <unistd.h>
 
 int _putchar(char c);
+int coin(int n, int tmp);
 #endif
