@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
 			cent = coin(n, 0);
 			printf("%d\n", cent);
 		}
+	
 	}
 	return (0);
 }
@@ -45,75 +46,38 @@ int coin(int n, int tmp)
 {
 	int rem = 0;
 	int cent = 0;
+	int coins[5] = {25, 10, 5, 2, 1};
+	int i;
 
-	if (n > 25)
+	for (i = 0; i < 5; i++)
 	{
-		rem = n % 25;
-		if (!tmp && rem == 0)
+		if (n > coins[i])
 		{
-			return (n / 25);
+			rem = n % coins[i];
+			if (!tmp && rem == 0)
+			{
+				return (n / coins[i]);
+			}
+			else
+			{
+				cent = n / coins[i];
+				tmp += cent;
+				return (coin(rem, tmp));
+			}
 		}
-		else
+		else if (n == 1 && coins[i] == 1)
 		{
-			cent = n / 25;
-			tmp += cent;
-			return (coin(rem, tmp));
-		}
-	}
-	else if (n > 10)
-	{
-		rem = n % 10;
-		if (!tmp && rem == 0)
-		{
-			return (n / 10);
-		}
-		else
-		{
-			cent = n / 10;
-			tmp += cent;
-			return (coin(rem, tmp));
-		}
-	}
-	else if (n > 5)
-	{
-		rem = n % 5;
-		if (!tmp && rem == 0)
-		{
-			return (n / 5);
-		}
-		else
-		{
-			cent = n / 5;
-			tmp += cent;
-			return (coin(rem, tmp));
-		}
-	}
-	else if (n > 2)
-	{
-		rem = n % 2;
-		if (!tmp && rem == 0)
-		{
-			return (n / 2);
-		}
-		else
-		{
-			cent = n / 2;
-			tmp += cent;
-			return (coin(rem, tmp));
-		}
-	}
-	else if (n > 1 || n > 0)
-	{
-		rem = n % 1;
-		if (!tmp && rem == 0)
-		{
-			return (n / 1);
-		}
-		else
-		{
-			cent = n / 1;
-			tmp += cent;
-			return (coin(rem, tmp));
+			rem = n % coins[i];
+			if (!tmp && rem == 0)
+			{
+				return (n / coins[i]);
+			}
+			else
+			{
+				cent = n / coins[i];
+				tmp += cent;
+				return (coin(rem, tmp));
+			}
 		}
 	}
 
