@@ -31,7 +31,6 @@ int main(int argc, char *argv[])
 			cent = coin(n, 0);
 			printf("%d\n", cent);
 		}
-	
 	}
 	return (0);
 }
