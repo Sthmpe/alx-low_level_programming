@@ -4,7 +4,7 @@
  * main - Add positive numbers passed as argument.
  * @argc: Argument count.
  * @argv: Argument vector.
- * 
+ *
  * Return: always (0).
  */
 int main(int argc, char *argv[])
@@ -26,3 +26,4 @@ int main(int argc, char *argv[])
 	printf("%d\n", j);
 	return (0);
 }
+
