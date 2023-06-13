@@ -3,7 +3,7 @@
  * main - Check code.
  * @argc: Argument count.
  * @argv: Argument vector.
- * 
+ *
  * Return: always 0.
  */
 int main(int argc, char *argv[])
