@@ -9,8 +9,6 @@
  */
 int main(int argc, char *argv[])
 {
-	char *f = "ere";
-
 	if (argc - 1 < 2)
 	{
 		printf("Error\n");
@@ -18,6 +16,5 @@ int main(int argc, char *argv[])
 	}
 	else
 		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
-	printf("%d\n", atoi(f));
 	return (0);
 }
